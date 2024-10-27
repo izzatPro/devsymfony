@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# Название проекта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Описание**: Одностраничное приложение для получения интересных фактов о числах. Позволяет пользователю выбирать тип информации, вводить конкретные числа или использовать случайные числа.
 
-Currently, two official plugins are available:
+## Функциональность
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Выбор типа информации**:
+   - Math: Математические факты.
+   - Trivia: Интересные факты.
+   - Date: Исторические факты, связанные с конкретной датой.
+   
+2. **Запрос случайного факта**:
+   - Возможность выбрать случайное число или конкретное число для каждого типа.
 
-## Expanding the ESLint configuration
+3. **Обработка ошибок**:
+   - Сообщения об ошибках при некорректном вводе чисел, например: "Число должно быть в формате цифры".
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+4. **Отображение результата**:
+   - Результаты отображаются на новой странице, где указаны вводимые параметры и информация о числе.
 
-- Configure the top-level `parserOptions` property like this:
+## Использованные технологии
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **React** для создания компонентов интерфейса.
+- **TypeScript** для статической типизации.
+- **Material UI (MUI)** для оформления интерфейса.
