@@ -18,7 +18,7 @@ const InfoSelector: React.FC<InfoSelectorProps> = ({ onSelectType, onToggleRando
     const selectedType = event.target.value as string;
     setInfoType(selectedType);
     onSelectType(selectedType);
-  };
+};
 
   const handleRandomToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
     const isRandom = event.target.checked;
