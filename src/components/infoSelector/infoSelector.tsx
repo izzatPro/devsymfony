@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FormControl, InputLabel, Select, MenuItem, Checkbox, FormControlLabel, Button, TextField } from '@mui/material';
+import { SelectChangeEvent } from '@mui/material';
 
 interface InfoSelectorProps {
   onSelectType: (type: string) => void;
@@ -14,11 +15,12 @@ const InfoSelector: React.FC<InfoSelectorProps> = ({ onSelectType, onToggleRando
   const [month, setMonth] = useState<string>('');
   const [day, setDay] = useState<string>('');
 
-  const handleInfoTypeChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    const selectedType = event.target.value as string;
+  const handleInfoTypeChange = (event: SelectChangeEvent<string>) => {
+    const selectedType = event.target.value;
     setInfoType(selectedType);
     onSelectType(selectedType);
 };
+
 
   const handleRandomToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
     const isRandom = event.target.checked;
