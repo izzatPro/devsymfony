@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import InfoSelector from '../components/InfoSelector/InfoSelector';
+import InfoSelector from '../components/infoSelector/infoSelector';
 
 const HomePage: React.FC = () => {
   const [infoType, setInfoType] = useState<string>(''); // Сохраняем только `infoType`, поскольку его используем
